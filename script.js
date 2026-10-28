@@ -16,7 +16,7 @@ ${issue}
 
 Please contact me regarding repair.`;
 
-let phone="919999999999";
+let phone="9396431000";
 
 let url=`https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
 
