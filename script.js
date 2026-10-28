@@ -1,66 +1,39 @@
-const counters =
-document.querySelectorAll(".counter");
+const elements = document.querySelectorAll(
+'.card, .brand, .feature, form'
+);
 
-counters.forEach(counter=>{
+const observer = new IntersectionObserver(entries=>{
 
-counter.innerText="0";
+entries.forEach(entry=>{
 
-const updateCounter=()=>{
+if(entry.isIntersecting){
 
-const target =
-+counter.getAttribute("data-target");
-
-const count =
-+counter.innerText;
-
-const increment =
-target/100;
-
-if(count < target){
-
-counter.innerText =
-`${Math.ceil(count+increment)}`;
-
-setTimeout(updateCounter,20);
+entry.target.classList.add('show');
 
 }
-else{
-
-counter.innerText=target;
-
-}
-
-};
-
-updateCounter();
 
 });
 
-function sendWhatsapp(){
+});
 
-let name =
-document.getElementById("name").value;
+elements.forEach(el=>{
 
-let mobile =
-document.getElementById("mobile").value;
+el.classList.add('hidden');
 
-let vehicle =
-document.getElementById("vehicle").value;
+observer.observe(el);
 
-let issue =
-document.getElementById("issue").value;
+});
 
-let message =
-`Hello FutureTechnologies,%0A%0A
-Name: ${name}%0A
-Mobile: ${mobile}%0A
-Vehicle: ${vehicle}%0A%0A
-Issue:%0A${issue}%0A%0A
-Please contact me for repair service.`;
+document
+.getElementById('repairForm')
+.addEventListener('submit',function(e){
 
-window.open(
-`https://wa.me/919999999999?text=${message}`,
-"_blank"
+e.preventDefault();
+
+alert(
+'✅ Thank you! FutureTech EV Repairs will contact you soon.'
 );
 
-}
+this.reset();
+
+});
