@@ -1,182 +1,418 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FutureTech EV Repairs</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<script src="https://kit.fontawesome.com/4adf35b4b8.js" crossorigin="anonymous"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="Future Technologies EV Repair — Battery, BMS, VCU and controller repair enquiries for Ola, TVS iQube, Ather, electric autos and e-rickshaws.">
+  <title>Future Technologies | EV Repair</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<nav>
-    <div class="logo">
-        ⚡ FutureTech EV Repairs
-    </div>
-
-    <ul>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#brands">Brands</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-
-<section class="hero">
-
-    <div class="hero-text">
-        <h1>
-            EV Battery, BMS & VCU Repair Specialists
-        </h1>
-
-        <p>
-            Advanced Diagnosis & Repair for Electric Scooters,
-            EV Bikes and EV Rikshaws.
-        </p>
-
-        <a class="btn"
-           href="https://wa.me/919396431000"
-           target="_blank">
-            <i class="fab fa-whatsapp"></i>
-            WhatsApp Now
+<header class="header">
+  <a href="#home" class="brand">
+    <span class="brand-logo">F⚡</span>
+    <span class="brand-name">
+      FUTURE
+      <small>TECHNOLOGIES</small>
+    </span>
+  </a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+    ☰
+  </button>
+  <nav class="navigation" id="navigation">
+    <a href="#services">Services</a>
+    <a href="#vehicles">Vehicles</a>
+    <a href="#about">About Us</a>
+    <a href="#contact" class="nav-button">Contact Us ↗</a>
+  </nav>
+</header>
+<main>
+  <!-- HERO SECTION -->
+  <section class="hero section" id="home">
+    <div class="hero-content reveal">
+      <div class="eyebrow">
+        <span class="status-dot"></span>
+        EV REPAIR & DIAGNOSTICS
+      </div>
+      <h1>
+        Keep Your EV<br>
+        Moving <span>Forward.</span>
+      </h1>
+      <p class="hero-description">
+        Expert-focused diagnostic and repair enquiries for electric vehicle batteries,
+        BMS, VCU and controllers. Get help with your EV electrical and electronic issues.
+      </p>
+      <div class="hero-buttons">
+        <a href="#contact" class="button button-primary">
+          Book a Repair ↗
         </a>
-    </div>
-
-    <div class="hero-animation">
-
-        <div class="battery">
-            <div class="charge"></div>
+        <a href="https://wa.me/919347883070"
+           target="_blank"
+           rel="noopener"
+           class="button button-secondary">
+          WhatsApp Us ↗
+        </a>
+      </div>
+      <div class="hero-feature">
+        <div class="feature-icon">⚡</div>
+        <div>
+          <strong>Two-Wheeler & Three-Wheeler EVs</strong>
+          <p>Scooters, electric autos and e-rickshaws</p>
         </div>
-
-        <div class="circle circle1"></div>
-        <div class="circle circle2"></div>
-
+      </div>
     </div>
-
-</section>
-
-<section id="services">
-
-    <h2>Our EV Repair Services</h2>
-
+    <div class="hero-visual reveal">
+      <div class="orbit orbit-one"></div>
+      <div class="orbit orbit-two"></div>
+      <div class="image-label">
+        <span class="status-dot"></span>
+        EV DIAGNOSTICS
+        <strong>ACTIVE</strong>
+      </div>
+      <img
+        class="hero-image"
+        src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1200&q=85"
+        alt="Modern motorcycle and electric mobility"
+      >
+      <div class="image-shade"></div>
+      <div class="floating-card battery-card">
+        <span class="card-icon">▰</span>
+        <div>
+          <small>POWER SYSTEM</small>
+          <strong>Battery + BMS</strong>
+        </div>
+      </div>
+      <div class="floating-card scan-card">
+        <span class="card-icon">⌁</span>
+        <div>
+          <small>SMART CHECKS</small>
+          <strong>EV Diagnostics</strong>
+        </div>
+      </div>
+    </div>
+    <div class="hero-bottom">
+      <span>ENGINEERED FOR ELECTRIC MOBILITY</span>
+      <span>DIAGNOSE · REPAIR · RIDE</span>
+    </div>
+  </section>
+  <!-- VEHICLE BRANDS -->
+  <section class="brands section" id="vehicles">
+    <p class="section-label">EV BRANDS AND VEHICLES WE SUPPORT</p>
+    <div class="brand-list">
+      <span class="brand-item">OLA <small>ELECTRIC</small></span>
+      <span class="brand-item">TVS <small>iQUBE</small></span>
+      <span class="brand-item">ATHER</span>
+      <span class="brand-item">E-AUTO</span>
+      <span class="brand-item">E-RICKSHAW</span>
+      <span class="brand-item">OTHER EVs</span>
+    </div>
+  </section>
+  <!-- SERVICES -->
+  <section class="services section" id="services">
+    <div class="section-heading reveal">
+      <div>
+        <div class="eyebrow">OUR SERVICES</div>
+        <h2>Advanced Diagnostics.<br><span>Smarter Repairs.</span></h2>
+      </div>
+      <p>
+        We help identify electrical and electronic faults affecting your EV.
+        Repair options depend on the vehicle model and diagnostic results.
+      </p>
+    </div>
     <div class="service-grid">
-
-        <div class="card">
-            <i class="fas fa-battery-full"></i>
-            <h3>Battery Repair</h3>
-            <p>
-                Lithium-ion battery diagnosis,
-                balancing, rebuilding and repair.
-            </p>
+      <!-- BATTERY -->
+      <article class="service-card reveal">
+        <div class="service-top">
+          <span class="service-number">01 / ENERGY</span>
+          <span class="service-icon">⚡</span>
         </div>
-
-        <div class="card">
-            <i class="fas fa-microchip"></i>
-            <h3>BMS Repair</h3>
-            <p>
-                Battery Management System
-                troubleshooting and repair.
-            </p>
+        <div class="component battery-3d">
+          <div class="battery-cap"></div>
+          <div class="battery-body">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
-
-        <div class="card">
-            <i class="fas fa-cogs"></i>
-            <h3>VCU Repair</h3>
-            <p>
-                Vehicle Control Unit repairing,
-                testing and programming.
-            </p>
+        <h3>EV Battery Repair</h3>
+        <p>
+          Battery health checks, charging problems, reduced range and
+          battery pack fault diagnosis.
+        </p>
+        <a href="#contact" class="service-link" data-service="EV Battery Repair">
+          Enquire Now ↗
+        </a>
+      </article>
+      <!-- BMS -->
+      <article class="service-card reveal">
+        <div class="service-top">
+          <span class="service-number">02 / PROTECTION</span>
+          <span class="service-icon">⌘</span>
         </div>
-
+        <div class="component">
+          <div class="circuit-board">
+            <span class="chip">BMS</span>
+            <i></i><i></i><i></i><i></i>
+          </div>
+        </div>
+        <h3>BMS Repair</h3>
+        <p>
+          Battery Management System fault enquiries, charging protection,
+          communication and battery monitoring issues.
+        </p>
+        <a href="#contact" class="service-link" data-service="BMS Repair">
+          Enquire Now ↗
+        </a>
+      </article>
+      <!-- VCU -->
+      <article class="service-card reveal">
+        <div class="service-top">
+          <span class="service-number">03 / CONTROL</span>
+          <span class="service-icon">⌁</span>
+        </div>
+        <div class="component">
+          <div class="vcu-box">
+            <small>VEHICLE CONTROL</small>
+            <div class="vcu-screen">
+              <strong>VCU</strong>
+              <i></i><i></i><i></i>
+            </div>
+            <div class="vcu-pins"></div>
+          </div>
+        </div>
+        <h3>VCU & Controller</h3>
+        <p>
+          Vehicle Control Unit, controller, electrical connection and
+          electronic control fault diagnosis.
+        </p>
+        <a href="#contact" class="service-link" data-service="VCU / Controller Repair">
+          Enquire Now ↗
+        </a>
+      </article>
     </div>
-
-</section>
-
-<section id="brands">
-
-    <h2>Supported EV Brands</h2>
-
-    <div class="brands-container">
-
-        <div class="brand">TVS iQube</div>
-        <div class="brand">Ather</div>
-        <div class="brand">OLA Electric</div>
-        <div class="brand">Hero Electric</div>
-        <div class="brand">Bajaj Chetak</div>
-        <div class="brand">EV Rikshaw</div>
-
+    <div class="service-note reveal">
+      <span>✳</span>
+      <p>
+        <strong>Not sure about the problem?</strong>
+        Tell us your vehicle model and symptoms. We'll discuss the next steps.
+      </p>
+      <a href="#contact">Describe Your Issue ↗</a>
     </div>
-
-</section>
-
-<section class="features">
-
-    <div class="feature">
-        🔋 Battery Diagnostics
+  </section>
+  <!-- ABOUT / VEHICLE IMAGES -->
+  <section class="about-section" id="about">
+    <div class="about-inner section">
+      <div class="about-content reveal">
+        <div class="eyebrow">FUTURE TECHNOLOGIES</div>
+        <h2>
+          One Repair Partner.<br>
+          <span>More Ways to Move.</span>
+        </h2>
+        <p>
+          From electric scooters to electric autos, Future Technologies
+          welcomes repair enquiries for battery, BMS, VCU and controller
+          issues across multiple EV platforms.
+        </p>
+        <p>
+          Share your vehicle details and symptoms so we can help you
+          understand the next step.
+        </p>
+        <a href="#contact" class="button button-primary">
+          Contact Our Team ↗
+        </a>
+      </div>
+      <div class="image-grid reveal">
+        <div class="gallery-image gallery-large">
+          <img
+            src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=900&q=85"
+            alt="Motorcycle detail"
+            loading="lazy"
+          >
+          <span>ELECTRIC TWO-WHEELERS</span>
+        </div>
+        <div class="gallery-image">
+          <img
+            src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=85"
+            alt="Vehicle repair workshop"
+            loading="lazy"
+          >
+          <span>DIAGNOSTICS</span>
+        </div>
+        <div class="gallery-image">
+          <img
+            src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=85"
+            alt="Electric vehicle charging"
+            loading="lazy"
+          >
+          <span>EV POWER SYSTEMS</span>
+        </div>
+      </div>
     </div>
-
-    <div class="feature">
-        ⚙ VCU Programming
+  </section>
+  <!-- PROCESS -->
+  <section class="process section">
+    <div class="section-heading reveal">
+      <div>
+        <div class="eyebrow">HOW IT WORKS</div>
+        <h2>Simple Steps.<br><span>Clear Next Actions.</span></h2>
+      </div>
     </div>
-
-    <div class="feature">
-        📡 BMS Troubleshooting
+    <div class="process-grid">
+      <article class="process-card reveal">
+        <span class="process-number">01</span>
+        <h3>Share Your Details</h3>
+        <p>Tell us your name, vehicle model and the problem you're experiencing.</p>
+      </article>
+      <article class="process-card reveal">
+        <span class="process-number">02</span>
+        <h3>Discuss the Problem</h3>
+        <p>We review your enquiry and discuss the symptoms and possible checks.</p>
+      </article>
+      <article class="process-card reveal">
+        <span class="process-number">03</span>
+        <h3>Confirm Next Steps</h3>
+        <p>Repair options and costs depend on the diagnosis and parts required.</p>
+      </article>
     </div>
-
-</section>
-
-<section id="contact">
-
-    <h2>Book Repair Service</h2>
-
-    <form id="repairForm">
-
-        <input type="text"
-               placeholder="Your Name"
-               required>
-
-        <input type="text"
-               placeholder="Bike Name"
-               required>
-
+  </section>
+  <!-- CONTACT FORM -->
+  <section class="contact-section section" id="contact">
+    <div class="contact-panel">
+      <div class="contact-content reveal">
+        <div class="eyebrow">
+          <span class="status-dot"></span>
+          GET IN TOUCH
+        </div>
+        <h2>
+          Let's Get Your<br>
+          <span>EV Back on Track.</span>
+        </h2>
+        <p>
+          Fill in the form and send your repair enquiry directly through WhatsApp.
+        </p>
+        <div class="contact-detail">
+          <span class="detail-icon">↗</span>
+          <div>
+            <small>CALL / WHATSAPP</small>
+            <strong>93478 83070</strong>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <span class="detail-icon">◷</span>
+          <div>
+            <small>WORKING HOURS</small>
+            <strong>10:00 AM – 7:00 PM</strong>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form reveal" id="repairForm">
+        <label for="customerName">Your Name <span>*</span></label>
+        <input
+          type="text"
+          id="customerName"
+          name="name"
+          placeholder="Enter your full name"
+          autocomplete="name"
+          required
+        >
+        <label for="vehicleName">Vehicle / Bike Name <span>*</span></label>
+        <select id="vehicleName" name="vehicle" required>
+          <option value="" disabled selected>Select your vehicle</option>
+          <option value="Ola Electric">Ola Electric</option>
+          <option value="TVS iQube">TVS iQube</option>
+          <option value="Ather">Ather</option>
+          <option value="Electric Auto / E-Rickshaw">Electric Auto / E-Rickshaw</option>
+          <option value="Other EV">Other EV</option>
+        </select>
+        <label for="problem">Describe Your Problem <span>*</span></label>
         <textarea
-        placeholder="Problem Facing"
-        required></textarea>
-
-        <button type="submit">
-            Send Request
+          id="problem"
+          name="problem"
+          rows="4"
+          placeholder="Example: Battery not charging, BMS error, VCU issue..."
+          required
+        ></textarea>
+        <button type="submit" class="button button-primary submit-button">
+          Send Enquiry on WhatsApp ↗
         </button>
-
-    </form>
-
-</section>
-
-<a href="https://wa.me/919396431000"
-   target="_blank"
-   class="whatsapp">
-
-   <i class="fab fa-whatsapp"></i>
-
-</a>
-
-<footer>
-
-    <h3>FutureTech EV Repairs</h3>
-
-    <p>📱 9396431000</p>
-
-    <p>
-        Battery Repair | BMS Repair | VCU Repair
-    </p>
-
+        <p class="form-hint">
+          WhatsApp will open with your message ready. Tap Send in WhatsApp
+          to submit your enquiry.
+        </p>
+        <p id="formStatus" class="form-status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+  <!-- FAQ -->
+  <section class="faq section">
+    <div class="faq-heading reveal">
+      <div class="eyebrow">FAQ</div>
+      <h2>Frequently Asked<br><span>Questions.</span></h2>
+    </div>
+    <div class="faq-list reveal">
+      <details>
+        <summary>Which EV brands do you support? <span>+</span></summary>
+        <p>
+          You can enquire about Ola Electric, TVS iQube, Ather, electric
+          autos, e-rickshaws and other EVs. Repair availability depends
+          on the specific vehicle and fault.
+        </p>
+      </details>
+      <details>
+        <summary>Do you handle BMS, VCU and battery problems? <span>+</span></summary>
+        <p>
+          Yes, the website accepts enquiries for battery, BMS, VCU and
+          controller faults. The appropriate repair must be confirmed
+          after diagnosis.
+        </p>
+      </details>
+      <details>
+        <summary>How can I send my repair enquiry? <span>+</span></summary>
+        <p>
+          Complete the form on this page. WhatsApp opens with your name,
+          vehicle and problem already filled in. Tap Send to submit it.
+        </p>
+      </details>
+      <details>
+        <summary>Can I get a repair price online? <span>+</span></summary>
+        <p>
+          The cost depends on the vehicle, fault, parts and repair required.
+          Share your symptoms to discuss the next steps.
+        </p>
+      </details>
+    </div>
+  </section>
+</main>
+<!-- FOOTER -->
+<footer class="footer section">
+  <a href="#home" class="brand">
+    <span class="brand-logo">F⚡</span>
+    <span class="brand-name">
+      FUTURE
+      <small>TECHNOLOGIES</small>
+    </span>
+  </a>
+  <p>EV REPAIR · BATTERY · BMS · VCU</p>
+  <a href="https://wa.me/919347883070" target="_blank" rel="noopener">
+    WhatsApp ↗
+  </a>
+  <small>© <span id="year"></span> Future Technologies</small>
 </footer>
-
+<a
+  href="https://wa.me/919347883070"
+  class="floating-whatsapp"
+  target="_blank"
+  rel="noopener"
+  aria-label="Contact Future Technologies on WhatsApp"
+>
+  <span>◉</span>
+  <b>WhatsApp</b>
+</a>
 <script src="script.js"></script>
-
 </body>
 </html>
