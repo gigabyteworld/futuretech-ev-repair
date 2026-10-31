@@ -1,138 +1,153 @@
-// ============================================
-// FUTURE TECHNOLOGIES - EV REPAIR WEBSITE
-// ============================================
-// WhatsApp number with India country code.
-// Do not include + or spaces in the number.
-const WHATSAPP_NUMBER = "919347883070";
-// ============================================
-// MOBILE NAVIGATION
-// ============================================
-const menuToggle = document.getElementById("menuToggle");
-const navigation = document.getElementById("navigation");
-if (menuToggle && navigation) {
-  menuToggle.addEventListener("click", () => {
-    const isOpen = navigation.classList.toggle("open");
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
-    menuToggle.setAttribute(
-      "aria-label",
-      isOpen ? "Close navigation" : "Toggle navigation"
-    );
-    menuToggle.textContent = isOpen ? "×" : "☰";
-  });
-  // Close the mobile menu after selecting a navigation link.
-  navigation.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      navigation.classList.remove("open");
-      menuToggle.setAttribute("aria-expanded", "false");
-      menuToggle.setAttribute("aria-label", "Toggle navigation");
-      menuToggle.textContent = "☰";
-    });
-  });
-}
-// ============================================
-// SERVICE ENQUIRY LINKS
-// ============================================
-document.querySelectorAll("[data-service]").forEach((link) => {
-  link.addEventListener("click", () => {
-    const problemField = document.getElementById("problem");
-    if (problemField && !problemField.value.trim()) {
-      problemField.value =
-        "I need help with " +
-        link.dataset.service +
-        ". Please contact me regarding diagnosis and repair.";
-    }
-  });
+// Cursor Glow
+
+const glow =
+document.getElementById("cursor-glow");
+
+document.addEventListener("mousemove",(e)=>{
+
+glow.style.left=e.clientX+"px";
+glow.style.top=e.clientY+"px";
+
 });
-// ============================================
-// WHATSAPP CONTACT FORM
-// ============================================
-const repairForm = document.getElementById("repairForm");
-const formStatus = document.getElementById("formStatus");
-if (repairForm) {
-  repairForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    // Get customer details.
-    const name = document
-      .getElementById("customerName")
-      .value
-      .trim();
-    const vehicle = document
-      .getElementById("vehicleName")
-      .value;
-    const problem = document
-      .getElementById("problem")
-      .value
-      .trim();
-    // Validate required fields.
-    if (!name || !vehicle || !problem) {
-      formStatus.textContent =
-        "Please complete all required fields.";
-      return;
-    }
-    // Prepare the WhatsApp message.
-    const message = [
-      "Hello Future Technologies!",
-      "",
-      "I would like to enquire about EV repair.",
-      "",
-      "Name: " + name,
-      "Vehicle / Bike Name: " + vehicle,
-      "Problem: " + problem,
-      "",
-      "Please contact me regarding diagnosis and repair.",
-      "Thank you."
-    ].join("\n");
-    // Encode the message for the WhatsApp URL.
-    const whatsappURL =
-      "https://wa.me/" +
-      WHATSAPP_NUMBER +
-      "?text=" +
-      encodeURIComponent(message);
-    formStatus.textContent =
-      "Opening WhatsApp with your enquiry...";
-    // Open WhatsApp in a new tab or app.
-    const whatsappWindow = window.open(
-      whatsappURL,
-      "_blank",
-      "noopener,noreferrer"
-    );
-    // Fallback in case the browser blocks a new window.
-    if (!whatsappWindow) {
-      window.location.href = whatsappURL;
-    }
-  });
+
+// Counter Animation
+
+document.querySelectorAll(".counter")
+.forEach(counter=>{
+
+const update=()=>{
+
+const target=
++counter.getAttribute("data-target");
+
+const count=
++counter.innerText;
+
+const speed=50;
+
+const inc=
+target/speed;
+
+if(count<target){
+
+counter.innerText=
+Math.ceil(count+inc);
+
+setTimeout(update,20);
+
 }
-// ============================================
-// AUTOMATIC COPYRIGHT YEAR
-// ============================================
-const yearElement = document.getElementById("year");
-if (yearElement) {
-  yearElement.textContent = new Date().getFullYear();
+else{
+
+counter.innerText=target;
+
 }
-// ============================================
-// SCROLL REVEAL ANIMATIONS
-// ============================================
-const revealItems = document.querySelectorAll(".reveal");
-if ("IntersectionObserver" in window) {
-  const observer = new IntersectionObserver(
-    (entries, observerInstance) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observerInstance.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      threshold: 0.12
-    }
-  );
-  revealItems.forEach((item) => {
-    observer.observe(item);
-  });
-} else {
-  // Show everything if IntersectionObserver is unavailable.
-  revealItems.forEach((item) => {
-    item.classList.add("is-visible");
-  });
+
+};
+
+update();
+
+});
+
+// GSAP
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".service-card",{
+
+opacity:0,
+y:100,
+
+stagger:.2,
+
+scrollTrigger:{
+
+trigger:".services"
+
 }
+
+});
+
+// Swiper
+
+new Swiper(".review-slider",{
+
+loop:true,
+
+autoplay:{
+delay:3000
+}
+
+});
+
+// THREE JS HERO
+
+const scene =
+new THREE.Scene();
+
+const camera =
+new THREE.PerspectiveCamera(
+75,
+window.innerWidth/window.innerHeight,
+0.1,
+1000
+);
+
+const renderer =
+new THREE.WebGLRenderer({
+alpha:true,
+antialias:true
+});
+
+renderer.setSize(
+window.innerWidth,
+window.innerHeight
+);
+
+document
+.getElementById("hero3d")
+.appendChild(renderer.domElement);
+
+const geometry =
+new THREE.TorusKnotGeometry(
+1,
+0.3,
+200,
+32
+);
+
+const material =
+new THREE.MeshPhysicalMaterial({
+
+color:0x00e5ff,
+
+metalness:1,
+
+roughness:0.1
+
+});
+
+const knot =
+new THREE.Mesh(
+geometry,
+material
+);
+
+scene.add(knot);
+
+camera.position.z=4;
+
+function animate(){
+
+requestAnimationFrame(animate);
+
+knot.rotation.x+=0.005;
+knot.rotation.y+=0.005;
+
+renderer.render(
+scene,
+camera
+);
+
+}
+
+animate();
