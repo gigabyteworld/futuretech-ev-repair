@@ -1,211 +1,77 @@
-:root{
-
---bg:#050816;
---primary:#00E5FF;
---secondary:#00FF88;
---accent:#2563EB;
---text:#ffffff;
-
+body {
+    margin: 0;
+    background: #050816;
+    color: #fff;
+    font-family: Arial
 }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px
 }
 
-body{
-
-font-family:'Poppins',sans-serif;
-background:var(--bg);
-color:white;
-overflow-x:hidden;
-scroll-behavior:smooth;
-
+a {
+    color: #00E5FF;
+    margin: 10px
 }
 
-canvas{
-position:fixed;
-width:100%;
-height:100%;
-z-index:-1;
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    align-items: center;
+    padding: 5vw
 }
 
-.navbar{
-display:flex;
-justify-content:space-between;
-padding:25px 8%;
+#hero3d {
+    height: 500px
 }
 
-.logo{
-font-size:1.8rem;
-font-weight:700;
-color:var(--primary);
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px
 }
 
-.hero{
-
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:0 8%;
-
+.card,
+.glass {
+    background: rgba(255, 255, 255, .08);
+    backdrop-filter: blur(12px);
+    padding: 20px;
+    border-radius: 20px
 }
 
-.hero h1{
-font-size:4rem;
-background:linear-gradient(
-90deg,
-#00E5FF,
-#00FF88
-);
-
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px
 }
 
-.btn-primary,
-.btn-secondary,
-.btn-whatsapp{
-
-padding:15px 30px;
-border-radius:40px;
-display:inline-block;
-text-decoration:none;
-margin:10px;
-
+.carousel {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    font-size: 2rem
 }
 
-.btn-primary{
-background:var(--primary);
-color:black;
+.glass input,
+.glass button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px
 }
 
-.btn-secondary{
-background:transparent;
-border:1px solid white;
-color:white;
-}
+@media(max-width:768px) {
+    .hero {
+        grid-template-columns: 1fr
+    }
 
-.btn-whatsapp{
-background:#25D366;
-color:white;
-}
-
-.glass-card{
-
-background:
-rgba(255,255,255,0.08);
-
-backdrop-filter:
-blur(20px);
-
-border:
-1px solid rgba(255,255,255,0.1);
-
-border-radius:20px;
-
-padding:30px;
-
-transition:.4s;
-
-}
-
-.glass-card:hover{
-
-transform:
-translateY(-10px);
-
-box-shadow:
-0 0 30px
-var(--primary);
-
-}
-
-.services-grid,
-.fleet-grid,
-.lab-grid,
-.about-grid{
-
-display:grid;
-grid-template-columns:
-repeat(auto-fit,minmax(250px,1fr));
-
-gap:30px;
-
-}
-
-section{
-padding:100px 8%;
-}
-
-.counter{
-font-size:4rem;
-color:var(--secondary);
-}
-
-.glass-form{
-
-max-width:700px;
-margin:auto;
-
-display:grid;
-gap:20px;
-
-}
-
-.glass-form input,
-.glass-form select{
-
-padding:15px;
-background:rgba(255,255,255,.08);
-
-border:none;
-color:white;
-
-border-radius:15px;
-
-}
-
-.glass-form button{
-
-background:var(--primary);
-padding:15px;
-border:none;
-
-font-weight:700;
-
-cursor:pointer;
-
-}
-
-footer{
-
-text-align:center;
-padding:40px;
-
-}
-
-#cursor-glow{
-
-position:fixed;
-
-width:300px;
-height:300px;
-
-border-radius:50%;
-
-background:
-radial-gradient(
-circle,
-rgba(0,229,255,.3),
-transparent
-);
-
-pointer-events:none;
-
-transform:
-translate(-50%,-50%);
-
+    #hero3d {
+        height: 350px
+    }
 }
