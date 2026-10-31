@@ -1,39 +1,387 @@
-<div class="hero-visual reveal">
-  <div class="ev-glow"></div>
-  <div class="ev-orbit ev-orbit-one"></div>
-  <div class="ev-orbit ev-orbit-two"></div>
-  <div class="ev-badge">
-    <span class="status-dot"></span>
-    NEXT-GEN EV TECHNOLOGY
-  </div>
-  <div class="ev-image-container">
-    <img
-      class="ev-scooter"
-      src="https://www.teslax.co.in/assets/scooter-hero-1-CkHCpjQM.jpg"
-      alt="Modern electric scooter with futuristic lighting"
-    >
-    <div class="ev-image-overlay"></div>
-  </div>
-  <div class="ev-info-card ev-battery-card">
-    <div class="ev-card-icon">⚡</div>
-    <div>
-      <small>POWER SYSTEM</small>
-      <strong>Battery & BMS</strong>
-      <span class="ev-card-status">● Diagnostics Ready</span>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EV Tech Solutions | EV Repair & Diagnostics</title>
+
+<meta name="description" content="Ola, Ather, TVS iQube, EV Rickshaw Repair, Battery Repair, BMS & VCU Diagnostics.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div id="cursor-glow"></div>
+
+<canvas id="particles"></canvas>
+
+<!-- NAVBAR -->
+
+<header>
+    <nav class="navbar">
+
+        <div class="logo">
+            EV Tech Solutions
+        </div>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Fleet</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+    </nav>
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Future Ready EV Service Center
+        </h1>
+
+        <p>
+            Battery • BMS • VCU • Motor Controllers • EV Diagnostics
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#booking" class="btn-primary">
+                Book Service
+            </a>
+
+            <a href="#" class="btn-secondary">
+                Emergency Repair
+            </a>
+
+            <a href="https://wa.me/919999999999"
+               class="btn-whatsapp">
+
+                WhatsApp Support
+            </a>
+
+        </div>
+
     </div>
-  </div>
-  <div class="ev-info-card ev-vcu-card">
-    <div class="ev-card-icon">⌘</div>
-    <div>
-      <small>CONTROL SYSTEM</small>
-      <strong>VCU & Controller</strong>
-      <span class="ev-card-status">● Electronic Diagnostics</span>
+
+    <div id="hero3d"></div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about container">
+
+    <h2>About EV Tech Solutions</h2>
+
+    <div class="about-grid">
+
+        <div class="glass-card">
+
+            <h3>10+</h3>
+            <p>Years Experience</p>
+
+        </div>
+
+        <div class="glass-card">
+
+            <h3>5000+</h3>
+            <p>Vehicles Repaired</p>
+
+        </div>
+
+        <div class="glass-card">
+
+            <h3>100%</h3>
+            <p>Certified Technicians</p>
+
+        </div>
+
+        <div class="glass-card">
+
+            <h3>Latest</h3>
+            <p>Diagnostic Tools</p>
+
+        </div>
+
     </div>
-  </div>
-  <div class="ev-scan-line"></div>
-  <div class="ev-tech-label">
-    <span>01</span> ELECTRIC MOBILITY
-    <span class="ev-label-line"></span>
-    <span>FUTURE TECHNOLOGIES</span>
-  </div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="services container">
+
+<h2>Premium Services</h2>
+
+<div class="services-grid">
+
+<div class="service-card">
+<i class="fas fa-bolt"></i>
+<h3>Ola Repair</h3>
 </div>
+
+<div class="service-card">
+<i class="fas fa-motorcycle"></i>
+<h3>Ather Repair</h3>
+</div>
+
+<div class="service-card">
+<i class="fas fa-car"></i>
+<h3>TVS iQube</h3>
+</div>
+
+<div class="service-card">
+<i class="fas fa-taxi"></i>
+<h3>EV Rickshaw</h3>
+</div>
+
+<div class="service-card">
+<i class="fas fa-battery-full"></i>
+<h3>Battery Repair</h3>
+</div>
+
+<div class="service-card">
+<i class="fas fa-microchip"></i>
+<h3>BMS Repair</h3>
+</div>
+
+<div class="service-card">
+<i class="fas fa-cogs"></i>
+<h3>VCU Diagnostics</h3>
+</div>
+
+<div class="service-card">
+<i class="fas fa-toolbox"></i>
+<h3>Motor Controller</h3>
+</div>
+
+</div>
+
+</section>
+
+<!-- FLEET -->
+
+<section class="fleet container">
+
+<h2>Fleet We Support</h2>
+
+<div class="fleet-grid">
+
+<div class="glass-card">Ola S1 Pro</div>
+<div class="glass-card">Ola S1 Air</div>
+<div class="glass-card">Ather 450X</div>
+<div class="glass-card">TVS iQube</div>
+<div class="glass-card">Bajaj Chetak</div>
+<div class="glass-card">Piaggio EV</div>
+<div class="glass-card">Mahindra Treo</div>
+<div class="glass-card">Euler HiLoad</div>
+
+</div>
+
+</section>
+
+<!-- BATTERY LAB -->
+
+<section class="battery-lab">
+
+<h2>Advanced Battery Lab</h2>
+
+<div class="lab-grid">
+
+<div class="glass-card">
+Battery Cell Testing
+</div>
+
+<div class="glass-card">
+Battery Refurbishment
+</div>
+
+<div class="glass-card">
+BMS Configuration
+</div>
+
+<div class="glass-card">
+Battery Health Reports
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="stats">
+
+<div class="counter-box">
+<h3 class="counter" data-target="5000">0</h3>
+<span>Repairs Completed</span>
+</div>
+
+<div class="counter-box">
+<h3 class="counter" data-target="98">0</h3>
+<span>Success Rate</span>
+</div>
+
+<div class="counter-box">
+<h3 class="counter" data-target="24">0</h3>
+<span>24x7 Support</span>
+</div>
+
+<div class="counter-box">
+<h3 class="counter" data-target="10">0</h3>
+<span>Years Experience</span>
+</div>
+
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section class="testimonials">
+
+<h2>Customer Reviews</h2>
+
+<div class="swiper review-slider">
+
+<div class="swiper-wrapper">
+
+<div class="swiper-slide glass-card">
+★★★★★
+Fast battery repair and diagnostics.
+</div>
+
+<div class="swiper-slide glass-card">
+★★★★★
+Excellent Ola scooter service.
+</div>
+
+<div class="swiper-slide glass-card">
+★★★★★
+Professional EV technicians.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- BOOKING -->
+
+<section id="booking">
+
+<h2>Book EV Service</h2>
+
+<form class="glass-form">
+
+<input
+type="text"
+placeholder="Your Name">
+
+<input
+type="tel"
+placeholder="Phone Number">
+
+<select>
+
+<option>Select Vehicle</option>
+
+<option>Ola S1 Pro</option>
+
+<option>Ather 450X</option>
+
+<option>TVS iQube</option>
+
+</select>
+
+<select>
+
+<option>Service Type</option>
+
+<option>Battery Repair</option>
+
+<option>BMS Repair</option>
+
+<option>VCU Repair</option>
+
+</select>
+
+<input type="date">
+
+<button>
+Book Service
+</button>
+
+</form>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact">
+
+<h2>Contact Us</h2>
+
+<div class="contact-grid">
+
+<div>
+
+<iframe
+src="https://maps.google.com/maps?q=hyderabad&t=&z=13&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+</div>
+
+<div>
+
+<a href="tel:+919999999999">
+Call Now
+</a>
+
+<a href="https://wa.me/919999999999">
+WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 EV Tech Solutions
+</p>
+
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
